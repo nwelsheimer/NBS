@@ -15,6 +15,5 @@ namespace Open_Miracle
     public string Address { get; set; }
     public bool managed { get; set; }
     public bool dflt { get; set; }
-    public decimal xId { get; set; }
   }    
 }
