@@ -101,7 +101,7 @@ namespace Open_Miracle
         sprmparam.Value = siteinfo.SiteName;
         sprmparam = sccmd.Parameters.Add("@address", SqlDbType.VarChar);
         sprmparam.Value = siteinfo.Address;
-        sprmparam = sccmd.Parameters.Add("@maanged", SqlDbType.VarChar);
+        sprmparam = sccmd.Parameters.Add("@managed", SqlDbType.VarChar);
         sprmparam.Value = siteinfo.managed;
         sprmparam = sccmd.Parameters.Add("@dflt", SqlDbType.VarChar);
         sprmparam.Value = siteinfo.dflt;
