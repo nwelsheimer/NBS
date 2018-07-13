@@ -1,0 +1,34 @@
+﻿<Window x:Class="MiracleI.Splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Miracle I" WindowStyle="None" WindowStartupLocation="CenterScreen" ShowInTaskbar="True" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:my="clr-namespace:ScottLogic.Controls.PieChart" Icon="/MiracleI;component/mirclei2.ico" d:DesignHeight="220" d:DesignWidth="431" SizeToContent="WidthAndHeight" BorderThickness="3" BorderBrush="#FF7C7C7C" ResizeMode="NoResize">
+    <Grid>
+        <Image HorizontalAlignment="Left" Margin="1,0,0,0" Name="image1" Stretch="Fill" Width="60" Source="/MiracleI;component/Images/mi-icon11.png" Height="57" VerticalAlignment="Bottom" />
+        <TextBlock Text ="Miracle" FontFamily="../Images/#yellow peas demo" HorizontalAlignment="Left" Margin="15,16,0,135" Name="label6" Width="80" Foreground="#FFFAA237" FontWeight="Bold" FontSize="20" />
+        <TextBlock Text ="i" FontFamily="../Images/#Ceria Lebaran" Margin="81,1,0,138" Name="label7" Foreground="#FFD7D7D7" HorizontalAlignment="Left" Width="30" FontSize="40" FontWeight="Normal" />
+        <Button Content="x" Height="23" Margin="0,17,12,0" Name="btnClose" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFFF6141" ToolTip="Close" Click="btnClose_Click" HorizontalAlignment="Right" Width="27" />
+        <Grid Name="grdSplash" Margin="0,1,0,0">
+        <Label Content="Accessing databases...." Height="42" Margin="36,53,115,0" Name="label1" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center" Foreground="#FFA3A3A3" />
+            <TextBlock Foreground="#FF838383" Margin="44,0,0,17" Name="textBlock3" Text="@2012-2014 Openmiracle Inc. All Rights Reserved. Licence Free." TextAlignment="Center" TextWrapping="Wrap" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="366" />
+        </Grid>
+        <Grid Name="grdLogIn">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="144" />
+                <ColumnDefinition Width="327*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="User Name :" Height="28" HorizontalAlignment="Left" Margin="21,69,0,0" Name="label2" VerticalAlignment="Top" Width="75" Foreground="#FFAFAFAF" />
+            <Label Content="Password :" Foreground="#FFAFAFAF" Height="28" HorizontalAlignment="Left" Margin="30,104,0,0" Name="label3" VerticalAlignment="Top" Width="75" />
+            <TextBox Height="23" Margin="102,71,35,0" Name="txtUseName" VerticalAlignment="Top" TabIndex="0" KeyUp="txtUseName_KeyUp" Grid.ColumnSpan="2" />
+            <PasswordBox Margin="102,109,35,0" Name="txtPassword" TabIndex="1" KeyUp="txtPassword_KeyUp" Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+            <Button Content="LogIn" Height="23" Margin="0,0,35,16" Name="button1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="73" Click="button1_Click" TabIndex="2" BorderBrush="#FFBAB6B6" Background="{x:Null}" Foreground="#FFDEDEDE" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Grid.Column="1" />
+            <Label Content="Invalid User Name or Password." Margin="0,0,166,19" Name="label4" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="216" Foreground="#FFFF0A00" HorizontalContentAlignment="Right" Grid.ColumnSpan="2" Visibility="Hidden" />
+            <Label Content="Administrator Login" Grid.Column="1" Height="28" HorizontalAlignment="Right" Margin="0,46,36,0" Name="label5" VerticalAlignment="Top" Foreground="#FFA7A7A7" />
+        </Grid>
+    </Grid>
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#FF363636" Offset="0" />
+            <GradientStop Color="#FF1F1F1F" Offset="1" />
+        </RadialGradientBrush>
+    </Window.Background>
+</Window>

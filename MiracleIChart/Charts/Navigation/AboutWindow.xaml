@@ -1,0 +1,126 @@
+﻿<Window x:Class="Openmiracle.MiracleIChart.Charts.Navigation.AboutWindow" x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:l="clr-namespace:Openmiracle.MiracleIChart"
+        xmlns:p="clr-namespace:Openmiracle.MiracleIChart.Properties"
+        Height="368" Width="383" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        Icon="{x:Static l:D3IconHelper.MiracleIChartIcon}"
+        KeyDown="Window_KeyDown" WindowStyle="None" Foreground="#FFCDCDCD" Background="#E5202020" AllowsTransparency="True">
+    <Grid>
+        <FlowDocumentScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0,22,0,0">
+            <FlowDocument FontSize="13">
+                <FlowDocument.Resources>
+                    <Style TargetType="{x:Type Run}" x:Key="nav">
+                        <Setter Property="Foreground" Value="#FFb1b1b1"/>
+                    </Style>
+
+                    <Style TargetType="InlineUIContainer" x:Key="{x:Type InlineUIContainer}">
+                        <Setter Property="BaselineAlignment" Value="Center"/>
+                    </Style>
+
+                    <Style TargetType="ContentControl" x:Key="btn">
+                        <Setter Property="Margin" Value="0,1,0,1"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="FontFamily" Value="Lucida Console"/>
+                    </Style>
+
+                    <Style TargetType="ContentControl" x:Key="commandBtn">
+                        <Setter Property="Margin" Value="0,1,0,1"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="FontFamily" Value="Lucida Console"/>
+                    </Style>
+                </FlowDocument.Resources>
+
+                <Paragraph>
+                    <LineBreak/>
+                    <Run Name="r1"/>
+                    <Span>
+                        <Run Name="r2" Style="{DynamicResource nav}"/>
+                    </Span>
+                    <InlineUIContainer>
+                        <RepeatButton Style="{DynamicResource btn}" Content="+" Command="{x:Static l:ChartCommands.ZoomIn}" CommandTarget="{Binding}"/>
+                    </InlineUIContainer>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Name="r3"/>
+                    <Span>
+                        <Run Name="r4" Style="{DynamicResource nav}"/>
+                    </Span>
+                    <InlineUIContainer>
+                        <RepeatButton Style="{DynamicResource btn}" Content="-" Command="{x:Static l:ChartCommands.ZoomOut}" CommandTarget="{Binding}"/>
+                    </InlineUIContainer>
+                    <LineBreak/>
+                    <Run Name="r5"/>
+                    <Run Name="r6" Style="{DynamicResource nav}"/>
+                    <Run Name="r7"/>
+                    <Run Name="r8" Style="{DynamicResource nav}"/>
+                    <InlineUIContainer>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <RepeatButton Grid.Column="1" Grid.Row="0" Style="{DynamicResource btn}" FontSize="16" 
+                                          Content="↑" Margin="2" Command="{x:Static l:ChartCommands.ScrollUp}" CommandTarget="{Binding}"/>
+                            <RepeatButton Grid.Column="0" Grid.Row="1" Style="{DynamicResource btn}" FontSize="16" 
+                                          Content="←" Margin="2" Command="{x:Static l:ChartCommands.ScrollLeft}" CommandTarget="{Binding}"/>
+                            <RepeatButton Grid.Column="1" Grid.Row="1" Style="{DynamicResource btn}" FontSize="16" 
+                                          Content="↓" Margin="2" Command="{x:Static l:ChartCommands.ScrollDown}" CommandTarget="{Binding}"/>
+                            <RepeatButton Grid.Column="2" Grid.Row="1" Style="{DynamicResource btn}" FontSize="16" 
+                                          Content="→" Margin="2" Command="{x:Static l:ChartCommands.ScrollRight}" CommandTarget="{Binding}"/>
+                        </Grid>
+                    </InlineUIContainer>
+                    <LineBreak/>
+                    <Run Name="r9"/>
+                    <InlineUIContainer>
+                        <RepeatButton Style="{DynamicResource commandBtn}" Content="Ctrl"/>
+                    </InlineUIContainer>
+                    <Run>+</Run>
+                    <Run Name="r10" Style="{DynamicResource nav}"/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Name="r11"/>
+                    <InlineUIContainer>
+                        <RepeatButton Style="{DynamicResource commandBtn}" Content="Shift"/>
+                    </InlineUIContainer>
+                    <Run>+</Run>
+                    <Run Name="r12" Style="{DynamicResource nav}"/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Name="r13"/>
+                    <InlineUIContainer>
+                        <Button Style="{DynamicResource commandBtn}" Content="Home" Command="{x:Static l:ChartCommands.FitToView}" CommandTarget="{Binding}"/>
+                    </InlineUIContainer>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Name="r14"/>
+                    <InlineUIContainer>
+                        <Button Style="{DynamicResource commandBtn}" Content="F11" Command="{x:Static l:ChartCommands.CopyScreenshot}" CommandTarget="{Binding}"/>
+                    </InlineUIContainer>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run Name="r15"/>
+                    <InlineUIContainer>
+                        <Button Style="{DynamicResource commandBtn}" Content="Ctrl" Command="{x:Static l:ChartCommands.SaveScreenshot}" CommandTarget="{Binding}"/>
+                    </InlineUIContainer>
+                    <Run>+</Run>
+                    <InlineUIContainer>
+                        <Button Style="{DynamicResource commandBtn}" Content="S" Command="{x:Static l:ChartCommands.SaveScreenshot}" CommandTarget="{Binding}"/>
+                    </InlineUIContainer>
+                </Paragraph>
+                <Paragraph TextAlignment="Center">
+                    <Hyperlink Foreground="DarkOrange" NavigateUri="http://www.openmiracle.com" Click="Hyperlink_Click_1">www.openmiracle.com</Hyperlink>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <Button Background="{x:Null}" BorderBrush="{x:Null}" Content="x" Foreground="White" Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,7,-1,0" Name="button1" VerticalAlignment="Top" Width="36" Click="button1_Click" />
+        <Label Content="Help" Height="28" HorizontalAlignment="Left" Margin="15,7,0,0" Name="label1" VerticalAlignment="Top" Foreground="White" FontFamily="Berlin Sans FB" FontSize="18" Width="49" />
+    </Grid>
+</Window>

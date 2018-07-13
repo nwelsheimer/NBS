@@ -1,0 +1,31 @@
+﻿<Window x:Class="MiracleI.wdoAboutUs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="wdoAboutUs" Height="588" Width="776" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" WindowStyle="None" Opacity="1" Background="#00000000" AllowsTransparency="True">
+    <Grid>
+        <Grid Background="#F32B2B2B" Margin="0,110,0,1">
+            <Grid Background="#5A000000" Height="67" Name="grdTitle" VerticalAlignment="Top">
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" Click="btnClose_Click" Content="x" FontFamily="Estrangelo Edessa" FontSize="14" Foreground="White" Height="20" HorizontalAlignment="Right" Margin="0,26,20,0" Name="btnClose" ToolTip="Close" VerticalAlignment="Top" Width="36" />
+                <TextBlock FontFamily="../Images/#yellow peas demo" FontSize="20" FontWeight="Bold" Foreground="#FFFAA237" HorizontalAlignment="Left" Margin="28,25,0,22" Name="textBlock1" Text="Miracle" Width="80" />
+                <TextBlock FontFamily="../Images/#Ceria Lebaran" FontSize="40" FontWeight="Normal" Foreground="#FFD7D7D7" HorizontalAlignment="Left" Margin="94,10,0,19" Name="textBlock2" Text="i" Width="30" />
+            </Grid>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="74,112,0,0" Name="textBlock3" Text="Miracle I" VerticalAlignment="Top" Width="143" FontSize="18" FontFamily="Or" Foreground="White" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="74,141,0,0" Name="textBlock4" Text="Version :     1.0.0.0" VerticalAlignment="Top" Width="122" Foreground="#FFD4D4D4" />
+            <TextBlock Foreground="#FFD4D4D4" Height="23" HorizontalAlignment="Left" Margin="74,162,0,0" Name="textBlock5" Text="copyright © 2014 Openmiracle" VerticalAlignment="Top" Width="242" />
+            <TextBlock Foreground="#FFD4D4D4" Height="23" HorizontalAlignment="Left" Margin="74,191,0,0" Name="textBlock6" Text="Feel free to contact us :   info@openmiracle.com" VerticalAlignment="Top" Width="282" />
+            <TextBlock Foreground="#FFD4D4D4" Height="23" HorizontalAlignment="Left" Margin="74,216,0,0" Name="textBlock7" Text="Our Portals :   www.openmiracle.com" VerticalAlignment="Top" Width="282" />
+            <TextBlock Foreground="#FFD4D4D4" Height="23" HorizontalAlignment="Left" Margin="150,237,0,0" Name="textBlock8" Text="www.cybrosys.com" VerticalAlignment="Top" Width="111" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="74,289,0,0" Name="textBlock9" Text="Openmiracle" VerticalAlignment="Top" Width="282" FontWeight="Bold" FontSize="13" />
+            <TextBlock Foreground="#FFD4D4D4" Height="23" HorizontalAlignment="Left" Margin="74,315,0,0" Name="textBlock10" Text="Cybrosys Technologies Pvt. Ltd." VerticalAlignment="Top" Width="282" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="74,338,0,0" Name="textBlock11" Text="Neospace, Kinfra Techno Park," VerticalAlignment="Top" Width="282" TextWrapping="Wrap" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="74,356,0,0" Name="textBlock12" Text="Kakkancherry, Calicut University P.O., " TextWrapping="Wrap" VerticalAlignment="Top" Width="282" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="74,374,0,0" Name="textBlock13" Text="Kerala, India - 673635" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="74,400,0,0" Name="textBlock14" Text="Phone: +91 (0) 4943015006" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" />
+            <TextBlock Foreground="#FFD4D4D4" Height="23" HorizontalAlignment="Left" Margin="530,315,0,0" Name="textBlock15" Text="Level 1, Startup Village," VerticalAlignment="Top" Width="164" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="530,338,0,0" Name="textBlock16" Text="Kinfra Hitech Park, " TextWrapping="Wrap" VerticalAlignment="Top" Width="164" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="530,356,0,0" Name="textBlock17" Text="Kalamassery," TextWrapping="Wrap" VerticalAlignment="Top" Width="147" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="530,374,0,0" Name="textBlock18" Text="Cochin. India - 683503" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" />
+            <TextBlock Foreground="#FFD4D4D4" Height="20" HorizontalAlignment="Left" Margin="530,400,0,0" Name="textBlock19" Text="info@openmiracle.com" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" />
+        </Grid>
+    </Grid>
+</Window>
